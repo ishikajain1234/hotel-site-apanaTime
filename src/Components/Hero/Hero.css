@@ -1,0 +1,147 @@
+/* General Styles for Hero Section */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Hero Text Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Smaller text size for small screens */
+.hero-description {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 2s ease-in-out 1s;
+}
+
+/* Hero Button Styles */
+.hero-btn {
+  background-color: #e61e43;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+}
+
+.hero-btn.secondary {
+  background-color: transparent;
+  border: 2px solid #e61e43;
+  color: #e61e43;
+}
+
+.hero-btn.secondary:hover {
+  background-color: #e61e43;
+  color: white;
+}
+
+/* Hero Background Image & Animation */
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./first.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: changeBackground 15s infinite;
+  z-index: 1;
+}
+
+/* Keyframes to Cycle Background Images */
+@keyframes changeBackground {
+  0% {
+    background-image: url('./second.jpg');
+  }
+  33% {
+    background-image: url('./third.jpg');
+  }
+  66% {
+    background-image: url('./four.jpg');
+  }
+  100% {
+    background-image: url('./first.jpg');
+  }
+}
+
+/* Fade-in Text Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem; /* Smaller title */
+  }
+
+  .hero-description {
+    font-size: 1.5rem; /* Smaller description */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem; /* Even smaller title */
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Even smaller description */
+  }
+
+  .hero-btn {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
+}
