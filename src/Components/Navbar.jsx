@@ -58,10 +58,10 @@ const NavItem = ({ to, icon: Icon, text }) => (
 
 // Mobile Nav Item Component
 const MobileNavItem = ({ to, icon: Icon, text }) => (
-  <div className="flex items-center space-x-2 hover:text-[#e61e43] transition text-lg">
+  <a href={`#${to}`} className="flex items-center space-x-2 hover:text-[#e61e43] transition text-lg">
     <Icon className="w-7 h-7" />
     <span className="text-lg">{text}</span>
-  </div>
+  </a>
 );
 
 export default Navbar;
