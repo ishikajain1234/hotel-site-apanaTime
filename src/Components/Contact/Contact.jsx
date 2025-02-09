@@ -1,5 +1,5 @@
 import React from "react";
-import hotelBackground from "../Contact/contact.jpg"; // Add your hotel background image here
+import hotelBackground from "./contact.jpg"; // Add your hotel background image here
 
 const Contact = () => {
   return (

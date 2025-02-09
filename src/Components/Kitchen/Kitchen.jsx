@@ -1,12 +1,12 @@
 import React from "react";
 
 // Import images
-import img1 from "../Kitchen/food-3.jpg";
-import img2 from "../Kitchen/food-4.jpg";
-import img3 from "../Kitchen/food-5.jpg";
-import img4 from "../Kitchen/food-6.jpg";
-import img5 from "../Kitchen/food-7.jpg";
-import img6 from "../Kitchen/food-8.jpg";
+import img1 from "./food-3.jpg";
+import img2 from "./food-4.jpg";
+import img3 from "./food-5.jpg";
+import img4 from "./food-6.jpg";
+import img5 from "./food-7.jpg";
+import img6 from "./food-8.jpg";
 
 const Kitchen = () => {
   const kitchenItems = [
