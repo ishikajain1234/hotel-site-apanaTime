@@ -4,7 +4,7 @@ import img2 from "../rooms/2.jpg";
 import img3 from "../rooms/3.jpg";
 import img4 from "../rooms/4.jpg";
 import Button from "./Button";
-// import './Rooms.css'; // Import the CSS file
+
 
 const Rooms = () => {
   return (
